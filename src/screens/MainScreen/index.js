@@ -1,6 +1,7 @@
-import React, { useState, useRef } from "react";
-import CForm from "./components/form";
+import React, {useRef, useState} from "react";
+
 import Card from "./components/card";
+import CForm from "./components/form";
 
 const defaultCardNo = "#### #### #### ####";
 const defaultCardHolderName = "FULL NAME";
