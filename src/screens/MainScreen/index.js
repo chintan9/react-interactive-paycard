@@ -1,14 +1,15 @@
-import React, { useState, useRef, useCallback } from 'react';
-import CForm from './components/form';
+import React, {useCallback, useRef, useState} from 'react';
+
 import Card from './components/card';
+import CForm from './components/form';
 
 const initialState = {
-    cardNumber: '#### #### #### ####',
-    cardHolder: 'FULL NAME',
-    cardMonth: '',
-    cardYear: '',
-    cardCvv: '',
-    isCardFlipped: false
+  cardNumber : '#### #### #### ####',
+  cardHolder : 'FULL NAME',
+  cardMonth : '',
+  cardYear : '',
+  cardCvv : '',
+  isCardFlipped : false
 };
 
 const MainScreen = () => {

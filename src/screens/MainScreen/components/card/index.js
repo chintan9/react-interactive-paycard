@@ -1,39 +1,40 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import {
-    CSSTransition,
-    TransitionGroup,
-    SwitchTransition
-} from 'react-transition-group';
 import './styles.scss';
 
+import React, {useCallback, useEffect, useMemo, useState} from 'react';
+import {
+  CSSTransition,
+  SwitchTransition,
+  TransitionGroup
+} from 'react-transition-group';
+
 const CARDS = {
-    visa: '^4',
-    amex: '^(34|37)',
-    mastercard: '^5[1-5]',
-    discover: '^6011',
-    unionpay: '^62',
-    troy: '^9792'
+  visa : '^4',
+  amex : '^(34|37)',
+  mastercard : '^5[1-5]',
+  discover : '^6011',
+  unionpay : '^62',
+  troy : '^9792'
 };
 
 const cardBackgroundName = () => {
-    let random = Math.floor(Math.random() * 25 + 1);
-    return `${random}.jpeg`;
+  let random = Math.floor(Math.random() * 25 + 1);
+  return `${random}.jpeg`;
 };
 
 const BACKGROUND_IMG = cardBackgroundName();
 
 const Card = ({
-    cardHolder,
-    cardNumber,
-    cardMonth,
-    cardYear,
-    cardCvv,
-    isCardFlipped,
-    currentFocusedElm,
-    onCardElementClick,
-    cardNumberRef,
-    cardHolderRef,
-    cardDateRef
+  cardHolder,
+  cardNumber,
+  cardMonth,
+  cardYear,
+  cardCvv,
+  isCardFlipped,
+  currentFocusedElm,
+  onCardElementClick,
+  cardNumberRef,
+  cardHolderRef,
+  cardDateRef
 }) => {
     const [style, setStyle] = useState(null);
 
